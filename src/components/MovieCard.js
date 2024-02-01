@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const MovieCard = ({ id, title, director, duration, rating, premiered, genres, imageUrl, backClass }) => {
   const handleImageError = (e) => {
-    e.target.src = 'https://www.bing.com/th/id/OGC.84eae86630d2fd29c8408f4e18fbe2a1?pid=1.7&rurl=https%3a%2f%2fshortpixel.com%2fimg%2fspinner2.gif&ehk=lWJv9llrAhKbhWPj6RaehsCcolajW%2bKel3wwLnUAO90%3d';  // Set placeholder image if the main image fails to load
+    e.target.src = 'https://www.bing.com/th/id/OGC.84eae86630d2fd29c8408f4e18fbe2a1?pid=1.7&rurl=https%3a%2f%2fshortpixel.com%2fimg%2fspinner2.gif&ehk=lWJv9llrAhKbhWPj6RaehsCcolajW%2bKel3wwLnUAO90%3d'; 
   };
 
   return (
@@ -12,7 +12,7 @@ const MovieCard = ({ id, title, director, duration, rating, premiered, genres, i
         src={imageUrl}
         className="card-img-top"
         alt={title}
-        onError={handleImageError}  // Handle image loading error
+        onError={handleImageError}  
       />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>

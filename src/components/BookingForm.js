@@ -8,7 +8,6 @@ const BookingForm = ({ id }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Save user details to local storage or perform any other necessary actions
         navigate('/');
     };
 
