@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import MovieCard from './MovieCard';  
+import MovieCard from './MovieCard';
 
 const ShowList = () => {
   const [shows, setShows] = useState([]);
@@ -21,26 +20,22 @@ const ShowList = () => {
   }, []);
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 ">
       <h1 className="text-center mb-4">Explore Shows</h1>
-      <div className="row">
+      <div className="row justify-content-center align-items-center" >
         {shows.map((show) => (
-          <div key={show.show.id} className="col-md-4  mb-4">
+          <div key={show.show.id} className="col-lg-4 col-md-6 col-sm-12 mb-4">
             <MovieCard
               id={show.show.id}
               title={show.show.name}
               director={show.show.network ? show.show.network.name : 'Unknown'}
-                    duration={show.show.weight}
-                    rating={show.show.rating.average}
-                    premiered={show.show.premiered}
+              duration={show.show.weight}
+              rating={show.show.rating.average}
+              premiered={show.show.premiered}
               genres={show.show.genres}
-                    imageUrl={show.show.image ? show.show.image.medium : 'placeholder-image-url'
-                    }
-                    backClass=""
-
-                    
-                />
-
+              imageUrl={show.show.image ? show.show.image.medium : 'placeholder-image-url'}
+              backClass=""
+            />
           </div>
         ))}
       </div>
